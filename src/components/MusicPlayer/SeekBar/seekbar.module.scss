@@ -1,0 +1,13 @@
+.seekBar {
+  display: flex;
+  gap: 15px;
+  button {
+    background: none;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+}

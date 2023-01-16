@@ -1,0 +1,45 @@
+@import 'styles/mixins';
+.app {
+  position: relative;
+  display: flex;
+}
+.app__container {
+  flex: 1 1 auto;
+  background: linear-gradient(135deg, #090909, #121286);
+  height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+.app__content {
+  display: flex;
+  padding: 20px 0 0 0;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column-reverse;
+    padding: 0 0 0 0;
+  }
+}
+.app__pageWrap {
+  flex: 1 1 70%;
+  padding: 0 20px;
+}
+.app__TopWrap {
+  padding-top: 50px;
+  @media screen and (max-width: 1000px) {
+    padding-top: 20px;
+  }
+  flex: 1 1 400px;
+}
+.app__player {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), #101025);
+  backdrop-filter: blur(100px);
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+}

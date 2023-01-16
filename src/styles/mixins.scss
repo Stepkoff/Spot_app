@@ -1,0 +1,21 @@
+@use 'sass:math';
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 1279px) {
+    @content
+  }
+}
+@mixin pc {
+  @media screen and (min-width: 1280px) {
+    @content
+  }
+}
+//=====================To REM
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}

@@ -1,0 +1,9 @@
+.volume {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}

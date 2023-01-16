@@ -1,0 +1,51 @@
+@import "./src/styles/variables";
+.songCard {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  &:hover {
+    background-color: #4C426D;
+  }
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+.songCard__body {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+  .songCard__play {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover {
+    .songCard__play {
+      display: flex;
+    }
+  }
+  .songCard__play_active {
+    display: flex;
+  }
+}
+
+.songCard__description {
+  p {
+    &:first-child{
+      margin-bottom: 5px;
+      a {
+        color: $mainTextColor;
+        font-weight: 500;
+      }
+    }
+    &:last-child {
+      a {
+        color: $textGray;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "./src/styles/mixins";
+@import "./src/styles/variables";
+.sideBar {
+}
+.sideBar__Burger {
+  display: none;
+  @include tablet {
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    padding: 5px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    top: 15px;
+    right: 23px;
+    color: $mainTextColor;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.sideBar__content {
+  background-color: $bg-sidebar;
+  height: 100%;
+  transition: 0.5s left;
+  z-index: 10;
+  @include tablet {
+    position: absolute;
+    left: -240px;
+  }
+  width: 240px;
+  > p {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 0 20px 0 ;
+    font-size: 30px;
+    color: $logo-c;
+  }
+}
+.sideBar__active {
+  left: 0;
+
+}
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: $textGray;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0 0 30px 15px;
+    &:hover {
+      color: $textActive;
+    }
+  }
+}

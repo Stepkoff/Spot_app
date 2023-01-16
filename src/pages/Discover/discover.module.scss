@@ -1,0 +1,30 @@
+@import './src/styles/variables';
+@import './src/styles/mixins';
+.discover {
+}
+.discover__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 20px 0;
+  grid-gap: 20px;
+}
+.discover__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+  }
+  select {
+    background-color: $bg-sidebar;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    option {
+      height: 20px;
+    }
+  }
+}

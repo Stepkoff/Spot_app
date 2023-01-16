@@ -1,0 +1,11 @@
+.track {
+  display: flex;
+  flex: 1;
+  gap: 5px;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+  img {
+    width: 50px;
+  }
+}

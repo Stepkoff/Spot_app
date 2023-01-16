@@ -1,0 +1,69 @@
+@import "./src/styles/mixins";
+@import "./src/styles/variables";
+.topPlay {
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 30px;
+  }
+  @include tablet {
+    padding: 0 20px;
+  }
+  padding: 0 20px 0 0;
+  @include pc {
+    padding: 0 40px 0 0;
+  }
+}
+.topPlay__charts {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.topChartCard {
+  padding: 5px;
+  border-radius: 5px;
+  &:hover {
+    background-color: #4C426D;
+  }
+  h3 {
+    margin: 0 10px 0 0;
+  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.topChartCard__content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  > div {
+    padding-right: 5px;
+  }
+  img {
+    border-radius: 10px;
+    width: 70px;
+    margin: 0 10px 0 0;
+  }
+}
+.topChartCard__title {
+  color: $mainTextColor;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.topChartCard__subtitle {
+  color: $textGray;
+}
+.topArtists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.swiperSlide {
+  width: 24%;
+  a {
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
